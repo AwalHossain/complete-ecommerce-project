@@ -11,6 +11,7 @@ height:100vh;
 display: flex;
 position:relative;
 overflow-y: hidden;
+overflow-x:hidden
 `
 const Arrow = styled.div`
 width:50px;
@@ -86,7 +87,7 @@ const Slider = () => {
             </Arrow>
             <Wrapper slideIndex={slideIndex}>
                 {sliderItems.map(item=>(
-                    <Slide bg={item.bg}>
+                    <Slide key={item.id} bg={item.bg}>
                     <ImgConatainer>
                         <Image src={item.img} />
                     </ImgConatainer>
